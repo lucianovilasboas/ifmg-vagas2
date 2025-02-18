@@ -39,7 +39,7 @@ ___
 st.info("""
 💬 **Qualquer dúvida, sugestão ou algum problema**, reportar para o 👨‍🏫 **Prof. Luciano** pelo 📧 e-mail: 📨 luciano.espiridiao@ifmg.edu.br""")
 
-col1, col2 = st.columns([3,1])
+col1, col2 = st.columns([6,1])
 with col1:
     uploaded_file = st.file_uploader("📝 Carregar arquivo Excel", type=["xlsx"])
 

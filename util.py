@@ -151,11 +151,11 @@ def ler_e_inicializa_dataframe(uploaded_file):
     # df["Confere_1"] = None
     # df["Confere_2"] = None
 
-    df["Total"] = df["Total"].astype(int)
-    df["Linguagens, Códigos e suas Tecnologias"] = df["Linguagens, Códigos e suas Tecnologias"].astype(int)
-    df["Matemática e suas Tecnologias"] = df["Matemática e suas Tecnologias"].astype(int)
-    df["Ciências da Natureza e suas Tecnologias"] = df["Ciências da Natureza e suas Tecnologias"].astype(int)
-    df["Ciências Humanas e suas Tecnologias"] = df["Ciências Humanas e suas Tecnologias"].astype(int)
+    df["Total"] = df["Total"].astype(float)
+    df["Linguagens, Códigos e suas Tecnologias"] = df["Linguagens, Códigos e suas Tecnologias"].astype(float)
+    df["Matemática e suas Tecnologias"] = df["Matemática e suas Tecnologias"].astype(float)
+    df["Ciências da Natureza e suas Tecnologias"] = df["Ciências da Natureza e suas Tecnologias"].astype(float)
+    df["Ciências Humanas e suas Tecnologias"] = df["Ciências Humanas e suas Tecnologias"].astype(float)
 
     df["Data de Nascimento"] = pd.to_datetime(
         pd.to_numeric(df["Data de Nascimento"], errors='coerce'),
