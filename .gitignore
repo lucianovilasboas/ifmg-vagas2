@@ -1,0 +1,25 @@
+
+
+# Ignore everything in this directory
+*.xls*
+
+
+# Ingoring notebooks
+.ipynb_checkpoints
+*.ipynb
+*.html
+
+# Ignore txt files
+*.txt
+
+# Ignore yaml and yml files
+*.yaml
+*.yml
+
+# acepting requirements.txt
+!requirements.txt
+
+
+
+# Ignore paychache files
+__pycache__/*.pyc
