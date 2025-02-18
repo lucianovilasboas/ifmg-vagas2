@@ -157,10 +157,12 @@ def ler_e_inicializa_dataframe(uploaded_file):
     df["Ciências da Natureza e suas Tecnologias"] = df["Ciências da Natureza e suas Tecnologias"].astype(float)
     df["Ciências Humanas e suas Tecnologias"] = df["Ciências Humanas e suas Tecnologias"].astype(float)
 
-    df["Data de Nascimento"] = pd.to_datetime(
-        pd.to_numeric(df["Data de Nascimento"], errors='coerce'),
-        origin='1899-12-30', unit='D'
-    ).fillna(pd.to_datetime(df["Data de Nascimento"], errors='coerce'))
+
+    if df["Data de Nascimento"].dtype == "object":
+        df["Data de Nascimento"] = pd.to_datetime(
+            pd.to_numeric(df["Data de Nascimento"], errors='coerce'),
+            origin='1899-12-30', unit='D'
+        ).fillna(pd.to_datetime(df["Data de Nascimento"], errors='coerce'))
 
 
     df = df.sort_values(by=cols_sorted, ascending=ascending_cols_sorted)

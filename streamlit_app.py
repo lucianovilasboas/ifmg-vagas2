@@ -3,6 +3,7 @@ import pandas as pd
 import io
 from config import ordem_form, fluxo, filtros, regras_remanejamento, filter_situacao_geral
 from config import fluxo_vagas_nao_ocupadas
+from config import cols_sorted, ascending_cols_sorted
 from util import gerar_carga_de_dados, highlight_cota, ler_e_inicializa_dataframe, to_text, total_vagas, zerar_vagas
 
 st.set_page_config(page_title="Ocupação de Vagas - IFMG", page_icon="🎯", layout="wide")
@@ -225,6 +226,7 @@ if uploaded_file is not None:
                 # df_filter.loc[:, "Confere_1"]  = df_filter["Grupo de vagas inicial"] ==  df_filter["Grupo_vagas_inicial_"]
                 # df_filter.loc[:, "Confere_2"]  = df_filter["Grupo de vagas chamado"] ==  df_filter["Grupo_vagas_chamado_"] 
 
+                df_filter = df_filter.sort_values(by=cols_sorted, ascending=ascending_cols_sorted)
                 styled_df = df_filter.style.apply(highlight_cota, axis=1)
 
                 st.dataframe(styled_df)
