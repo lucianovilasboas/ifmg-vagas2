@@ -43,8 +43,8 @@ col1, col2 = st.columns([3,1])
 with col1:
     uploaded_file = st.file_uploader("📝 Carregar arquivo Excel", type=["xlsx"])
 
-with col2:
-    situacao_geral = st.multiselect(" 📝 Selecione a situação geral", filter_situacao_geral)
+# with col2:
+#     situacao_geral = st.multiselect(" 📝 Selecione a situação geral", filter_situacao_geral)
 
 
 
@@ -215,7 +215,7 @@ if uploaded_file is not None:
             # iniciar a ocupação de vagas
             # Selecionar as colunas necessárias para a ocupação
 
-            df_filter = df[(df["Curso"] == curso_selecionado) & (df["Situação Geral"].isin(situacao_geral)) ]
+            df_filter = df[(df["Curso"] == curso_selecionado) & (df["Situação Geral"].isin(filter_situacao_geral)) ]
 
             ocupar_vagas(df_filter)
             
