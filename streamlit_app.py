@@ -26,11 +26,13 @@ st.title("🎯 Ocupação de Vagas - IFMG 🏛️")
 
 st.error(""" #### 📂🚨 ATENÇÃO:
 - **Este é um aplicativo experimental** para auxiliar na ocupação de vagas. Favor sempre conferir os resultados antes de utilizá-los;
-- **Ao formato do arquivo (📈 Excel) de entrada**. O 📈 arquivo precisa estar 🔢 ordenado por nota final (Total ou Média) de forma descendente e seguindo os critérios de desempate;
+___
+- **Remova da 📈 planilha os candidatos eliminados** e mantenha na coluna **Situação Geral** os valores _Classificado(a)_ ou _Excedente_;
+- **Ao formato da 📈 planilha de entrada**. Verifique se 📈 arquivo está 🔢 ordenado por nota final (Total ou Média) de forma descendente e seguindo os critérios de desempate;
 - **À realização das próxmimas chamadas**. Atualize o arquivo de entrada removendo os classificados da chamada anterior (deixe apenas os excedentes) e conferindo a ordenação conforme os critérios do Edital. 
 - **Lembre-se de que se alguma matrícula for indeferida por não comprovação de cota**, o candidato deve voltar para planilha com sua opção de vaga alterada para **AC** e deve-se aplicar a ordenação das notas conforme os critéiros do Edital.
 ___
-- Após a classificação o resultado será exibido nas colunas: **Grupo_vagas_inicial_**, **Grupo_vagas_chamado_**, **Classificacao_geral_** e **Situacao_geral_**. A coluna **Info** exibirá a ação realizada para cada candidato.
+- Após a classificação o resultado será exibido nas colunas: **Grupo de vagas inicial**, **Grupo de vagas chamado**, **Classificação Geral** e **Situação Geral_**. A coluna **Info** exibirá a ação realizada para cada candidato.
 """
 )
 
